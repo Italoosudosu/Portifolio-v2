@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <section class="portfolio">
+    <div class="interface">
+      <h2>Meu Portfólio</h2>
+      <div class="flex">
+        <div class="img-port" style="background-image: url(port/layout-do-projeto.jpg);" data-image="port/layout-do-projeto.jpg">
+          <div class="overlay">Projeto 1</div>
+        </div>
+        <div class="img-port" style="background-image: url();" data-image="img/port/imagem2.jpg">
+          <div class="overlay">Projeto 2</div>
+        </div>
+        <div class="img-port" style="background-image: url();" data-image="img/port/imagem3.jpg">
+          <div class="overlay">Projeto 3</div>
+        </div>
+      </div>
+    </div><!--Interface-->
+  </section><!--Portifolio-->
+
+  <!-- Modal para exibir a imagem ampliada -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
