@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Meus Projetos</h1>
+    <p>Clique em um projeto para visualizar em tamanho maior.</p>
+
+    <div class="gallery">
+
+        <img src="img/port/elden ring.png" alt="Projeto 1" onclick="openModal(this)">
+        <a href="https://github.com/Italoosudosu/Ladingpagenutricionista"> Repositorio</a>
+        <img src="img/port/jogo js.png" alt="Projeto 2" onclick="openModal(this)">
+        <img src="img/port/layout-do-projeto.jpg" alt="Projeto 3" onclick="openModal(this)">
+    </div>
+
+    <!-- Modal para exibição da imagem ampliada -->
+    <div class="modal" id="modal" onclick="closeModal()">
+        <img id="modal-img">
+    </div>
+
+    <script>
+        function openModal(img) {
+            let modal = document.getElementById("modal");
+            let modalImg = document.getElementById("modal-img");
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
